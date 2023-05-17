@@ -62,7 +62,7 @@ const NotesPage = ({match, history}) => {
   }
 
 let ChatGPT= async () => {
-    let prompt = note.content
+    let prompt = note.content + "return the results in bulleted form."
     let API_response = await fetch(`/api/OpenAI_API`)
     const API_KEY = await API_response.json()
     let originalNote = "ChatGPT response:\n"
